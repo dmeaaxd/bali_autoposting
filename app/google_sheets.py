@@ -1,12 +1,17 @@
+import os
+
+import dotenv
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
+
+dotenv.load_dotenv()
 
 scopes = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
 
 credentials = ServiceAccountCredentials.from_json_keyfile_name("../credentials.json", scopes)
 gc = gspread.authorize(credentials)
 
-spreadsheet = gc.open_by_key("14Ju7XOkv9_x7uxdEyCEOgzD7EJuVXtc_54zvCutGu54")
+spreadsheet = gc.open_by_key(os.getenv("TABLE_ID"))
 
 sheet = spreadsheet.worksheet("Автопостинг")
 
