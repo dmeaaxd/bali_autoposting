@@ -1,5 +1,4 @@
 from config import *
-from app.google_sheets import get_data
 
 # data = get_data()
 account_1.start()
