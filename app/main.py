@@ -1,4 +1,4 @@
-from app.config import *
+from config import *
 from app.google_sheets import get_data
 
 # data = get_data()
