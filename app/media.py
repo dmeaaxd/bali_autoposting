@@ -4,6 +4,11 @@ import requests
 
 
 def download_images(url_list, folder="../media"):
+    """
+    Запросом скачиваем фотографии и нумеруем их от 1 до ...
+    :param список ссылко для скачивания (функция из google_sheets.py):
+    :param папка для сохранения (установлена по умолчанию):
+    """
     os.makedirs(folder, exist_ok=True)
 
     for i, url in enumerate(url_list, start=1):

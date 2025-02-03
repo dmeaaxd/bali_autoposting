@@ -5,7 +5,7 @@ from telethon import TelegramClient
 
 dotenv.load_dotenv()
 
-
+# Конфигурация всех аккаунтов ТГ
 account_1 = TelegramClient('account_1', os.getenv("ACCOUNT_1_API_ID"), os.getenv("ACCOUNT_1_API_HASH"))
 account_2 = TelegramClient('account_2', os.getenv("ACCOUNT_2_API_ID"), os.getenv("ACCOUNT_2_API_HASH"))
 account_3 = TelegramClient('account_3', os.getenv("ACCOUNT_3_API_ID"), os.getenv("ACCOUNT_3_API_HASH"))
